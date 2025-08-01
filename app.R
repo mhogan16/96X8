@@ -1295,15 +1295,15 @@ function(data, type, row, meta) {
       opt_css(
         css = "
    .gt_heading .gt_title {
-      background-image: url(https://i.imgur.com/IFOXXXc.png);
-      background-size: 75px;
+      background-image: url(https://i.imgur.com/PPaGH4S.png);
+      background-size: 205px;
       background-repeat: no-repeat;
       background-position-y: 0px;
     }
 
 .gt_heading .gt_subtitle {
-      background-image: url(https://i.imgur.com/IFOXXXc.png);
-      background-size: 75px;
+      background-image: url(https://i.imgur.com/PPaGH4S.png);
+      background-size: 205px;
       background-repeat: no-repeat;
       background-position-y: -50px;
   }
@@ -1566,7 +1566,7 @@ function(data, type, row, meta) {
     select (timestamp,franchise,div,overall) %>%
     group_by(div) %>%
     mutate(ttd = ifelse(overall == 1,
-                        difftime(timestamp, as.POSIXct("2025-08-01 14:00:49", format="%Y-%m-%d %H:%M:%S", tz="UTC"), units="sec"),
+                        difftime(timestamp, as.POSIXct("2025-08-01 14:00:18", format="%Y-%m-%d %H:%M:%S", tz="UTC"), units="sec"),
                         difftime(timestamp, lag(timestamp, default = first(timestamp)), units="sec")
     )
     ) %>%
